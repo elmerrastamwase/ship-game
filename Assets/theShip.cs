@@ -72,21 +72,21 @@ public class theShip : MonoBehaviour {
         }
 
         //screen wraparound
-        if (transform.position.x <= -10.5)
+        if (transform.position.x <= -10.6)
         {
-            transform.position = new Vector3(10.4f, transform.position.y);
+            transform.position = new Vector3(10.5f, transform.position.y);
         }
-        if (transform.position.x >= 10.5)
+        if (transform.position.x >= 10.6)
         {
-            transform.position = new Vector3(-10.4f, transform.position.y);
+            transform.position = new Vector3(-10.5f, transform.position.y);
         }
-        if (transform.position.y <= -5.5)
+        if (transform.position.y <= -6.7)
         {
-            transform.position = new Vector3(transform.position.x, 5.4f);
+            transform.position = new Vector3(transform.position.x, 6.6f);
         }
-        if (transform.position.y >= 5.5)
+        if (transform.position.y >= 6.7)
         {
-            transform.position = new Vector3(transform.position.x, -5.4f);
+            transform.position = new Vector3(transform.position.x, -6.6f);
         }
     }
 }
