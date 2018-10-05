@@ -74,19 +74,19 @@ public class theShip : MonoBehaviour {
         //screen wraparound
         if (transform.position.x <= -10.5)
         {
-            transform.position = new Vector3(10.5f, transform.position.y);
+            transform.position = new Vector3(10.4f, transform.position.y);
         }
         if (transform.position.x >= 10.5)
         {
-            transform.position = new Vector3(-10.5f, transform.position.y);
+            transform.position = new Vector3(-10.4f, transform.position.y);
         }
         if (transform.position.y <= -5.5)
         {
-            transform.position = new Vector3(transform.position.x, 5.5f);
+            transform.position = new Vector3(transform.position.x, 5.4f);
         }
         if (transform.position.y >= 5.5)
         {
-            transform.position = new Vector3(transform.position.x, -5.5f);
+            transform.position = new Vector3(transform.position.x, -5.4f);
         }
     }
 }
