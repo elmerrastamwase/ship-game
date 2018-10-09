@@ -36,7 +36,7 @@ public class theShip : MonoBehaviour {
         //höger/vänster kod
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, 0, -260 * Time.deltaTime);
+            transform.Rotate(0, 0, (-shipRotation * Time.deltaTime));
             shipRender.color = rightColor;
         }
         if (Input.GetKey(KeyCode.A))
