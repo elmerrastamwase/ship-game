@@ -9,6 +9,7 @@ public class theShip : MonoBehaviour {
     public Color rightColor;
     public Color leftColor;
     public SpriteRenderer shipRender;
+    public SpriteRenderer shipRender2;
     public float timerTime;
     int shipRotation;
     float timerPrintCooldown;
@@ -19,7 +20,7 @@ public class theShip : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //ship movement speed
-        shipSpeed = Random.Range(5, 11);
+        shipSpeed = Random.Range(8, 16);
         //ship rotation speed
         shipRotation = Random.Range(230, 261);
         //spawn location
@@ -38,11 +39,13 @@ public class theShip : MonoBehaviour {
         {
             transform.Rotate(0, 0, (-shipRotation * Time.deltaTime));
             shipRender.color = rightColor;
+            shipRender2.color = rightColor;
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(0, 0, (shipRotation - 10) * Time.deltaTime);
             shipRender.color = leftColor;
+            shipRender2.color = leftColor;
         }
 
         //kod för att sakta ner skeppet
@@ -68,7 +71,9 @@ public class theShip : MonoBehaviour {
         //kod för random färg
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            shipRender.color = new Color(Random.Range(0f, 2f), Random.Range(0f, 2f), Random.Range(0f, 2f));
+            Color c = new Color(Random.Range(0f, 2f), Random.Range(0f, 2f), Random.Range(0f, 2f));
+            shipRender.color = c;
+            shipRender2.color = c;
         }
 
         //screen wraparound
